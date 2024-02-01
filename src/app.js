@@ -99,7 +99,12 @@ app.get('/registro', (req, res) => {
 app.get('/listar', (req, res) => {
     res.render('restaurante/listar')
 })
-
+app.get('/lista_menu', (req, res) => {
+    res.render('menu/lista_menu')
+})
+app.get('/lista_registro', (req, res) => {
+    res.render('menu/lista_registro')
+})
 
 // Exportar la aplicación
 module.exports = app;

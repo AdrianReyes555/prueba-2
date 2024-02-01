@@ -5,6 +5,7 @@ const menu = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true
         },
+        menuName: type.STRING(20),
 
         crearMenu:{
             type: 'TIMESTAMP',
