@@ -1,19 +1,21 @@
-const menu = (sequelize, type) => {
-    return sequelize.define('menus', {
-        idMenu: {
+const registro = (sequelize, type) => {
+    return sequelize.define('registros', {
+        idRegistro: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        menuName: type.STRING(20),
-        menuImagen: type.STRING(120),
-
-        crearMenu:{
+        fullname: type.STRING,
+        username: type.STRING,
+        email: type.STRING,
+        password: type.STRING,
+        
+        crearRegistro:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateGerente: {
+        updateRegistro: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
@@ -23,4 +25,4 @@ const menu = (sequelize, type) => {
     })
 }
 
-module.exports = menu
+module.exports = registroM
